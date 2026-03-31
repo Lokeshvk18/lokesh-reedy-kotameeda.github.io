@@ -22,7 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
     animatedElements.forEach(el => observer.observe(el));
 });
 
-// DevOps-themed typing animation
+// DevOps-themed typing animation (optional - can be enabled)
+// Uncomment below if you want typing effect
+/*
 const typingText = 'Lokesh Reddy K - DevOps Engineer';
 const typingElement = document.getElementById('typing-text');
 const cursor = document.querySelector('.cursor');
@@ -53,14 +55,8 @@ function type() {
 }
 
 // Start typing animation
-document.addEventListener('DOMContentLoaded', type);
-
-// Cursor blink animation
-if (cursor) {
-    setInterval(() => {
-        cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-    }, 500);
-}
+// document.addEventListener('DOMContentLoaded', type);
+*/
 
 // Create floating particles
 function createParticles() {

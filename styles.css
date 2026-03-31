@@ -112,22 +112,19 @@ header h1 {
     letter-spacing: -1px;
 }
 
-typing-cursor {
-    color: var(--accent-green);
-    animation: blink 1s step-end infinite;
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-header p {
+.devops-title {
     font-size: 1.3rem;
-    margin-top: 0.5rem;
     color: var(--accent-green);
     font-family: 'Fira Code', monospace;
     font-weight: 500;
+    margin: 0;
 }
 
 /* Terminal-style Navigation */
