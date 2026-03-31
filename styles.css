@@ -550,7 +550,7 @@ footer::before {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--accent-green);
+    background: var(--dot-color, var(--accent-green));
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -565,8 +565,8 @@ footer::before {
 }
 
 @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.7); }
-    50% { box-shadow: 0 0 0 10px rgba(63, 185, 80, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 var(--dot-color, var(--accent-green)); opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); opacity: 1; }
 }
 
 /* Code block decoration */
