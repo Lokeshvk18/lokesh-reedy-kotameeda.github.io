@@ -547,10 +547,12 @@ footer::before {
 }
 
 .status-dot {
-    width: 12px;
-    height: 12px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background: var(--dot-color, var(--accent-green));
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -559,14 +561,38 @@ footer::before {
     display: block;
     text-align: center;
     font-family: 'Fira Code', monospace;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     color: var(--text-secondary);
-    margin-top: 5px;
+    margin-top: 6px;
+    white-space: nowrap;
+    max-width: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
+/* Individual colors for each skill */
+.status-dot:nth-child(1) { background: #3fb950; --pulse-color: #3fb950; }
+.status-dot:nth-child(2) { background: #d29922; --pulse-color: #d29922; }
+.status-dot:nth-child(3) { background: #f85149; --pulse-color: #f85149; }
+.status-dot:nth-child(4) { background: #58a6ff; --pulse-color: #58a6ff; }
+.status-dot:nth-child(5) { background: #bc8cff; --pulse-color: #bc8cff; }
+.status-dot:nth-child(6) { background: #39c5cf; --pulse-color: #39c5cf; }
+.status-dot:nth-child(7) { background: #e3b347; --pulse-color: #e3b347; }
+.status-dot:nth-child(8) { background: #ff922b; --pulse-color: #ff922b; }
+.status-dot:nth-child(9) { background: #0db7ed; --pulse-color: #0db7ed; }
+.status-dot:nth-child(10) { background: #326ce5; --pulse-color: #326ce5; }
+.status-dot:nth-child(11) { background: #e65245; --pulse-color: #e65245; }
+.status-dot:nth-child(12) { background: #f46800; --pulse-color: #f46800; }
+
 @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 var(--dot-color, var(--accent-green)); opacity: 0.7; }
-    50% { box-shadow: 0 0 0 10px rgba(0, 0, 0, 0); opacity: 1; }
+    0%, 100% {
+        box-shadow: 0 0 0 0 var(--pulse-color, var(--accent-green));
+        opacity: 0.7;
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        opacity: 1;
+    }
 }
 
 /* Code block decoration */
