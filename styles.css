@@ -556,16 +556,7 @@ footer::before {
 }
 
 .status-dot::before {
-    content: attr(data-label);
-    display: block;
-    text-align: center;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    margin-top: 8px;
-    white-space: nowrap;
-    max-width: 100px;
-    overflow: visible;
+    display: none;
 }
 
 /* Linux - Green */
