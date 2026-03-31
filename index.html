@@ -6,7 +6,7 @@
     <title>Lokesh Reddy K - DevOps Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Fira+Code&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for social icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,12 +14,15 @@
 <body>
 <script src="scripts.js"></script>
 
+<!-- Floating Particles for DevOps feel -->
+<div class="particles" id="particles"></div>
+
     <div class="animated-background"></div>
 
     <header>
         <img src="images/profile-photo.jpg" alt="Lokesh Reddy" class="profile-photo">
-        <h1>Lokesh Reddy K</h1>
-        <p>DevOps Engineer</p>
+        <h1><span id="typing-text"></span><span class="cursor">|</span></h1>
+        <p>> $ whoami && echo "DevOps Engineer"</p>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -78,6 +81,11 @@
 
     <footer>
         <p>&copy; 2025 Lokesh Reddy Kotameeda. All rights reserved.</p>
+        <div class="server-status">
+            <span class="status-dot" data-label="CI"></span>
+            <span class="status-dot" data-label="CD"></span>
+            <span class="status-dot" data-label="AWS"></span>
+        </div>
     </footer>
 
 </body>
