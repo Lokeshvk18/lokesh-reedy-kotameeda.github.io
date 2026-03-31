@@ -560,13 +560,12 @@ footer::before {
     display: block;
     text-align: center;
     font-family: 'Fira Code', monospace;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     color: var(--text-secondary);
-    margin-top: 6px;
+    margin-top: 8px;
     white-space: nowrap;
-    max-width: 80px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    max-width: 100px;
+    overflow: visible;
 }
 
 /* Linux - Green */
