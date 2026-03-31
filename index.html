@@ -8,8 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<script src="scripts.js"></script>
 
     <div class="animated-background"></div>
 
@@ -24,16 +27,28 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/lokesh-reddy-k-3bb619169/?skipRedirect=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Lokeshvk18" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:lokesh.reddy3010@gmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="fade-in-up">
         <h2>About Me</h2>
         <p>
             DevOps Engineer with 5+ years of experience in AWS Cloud, automation, and CI/CD. Skilled in designing and managing scalable infrastructure using EC2, S3, VPC and EKS. Proficient in Docker, Kubernetes, Terraform & Ansible with strong expertise in Jenkins, Git, SonarQube, and Nexus for CI/CD pipelines. Experienced in monitoring and observability using Prometheus, Grafana, and ELK stack, ensuring reliable and efficient deployments.
         </p>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fade-in-left">
         <h2>Technical Skills</h2>
         <div class="skills-box">
             <div class="skill-category">
@@ -54,7 +69,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="fade-in-right">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:lokesh.reddy3010@gmail.com">lokesh.reddy3010@gmail.com</a></p>
         <p>Phone: +91-8725075768</p>
