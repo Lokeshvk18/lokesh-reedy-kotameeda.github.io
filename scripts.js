@@ -18,45 +18,72 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Target elements to animate
-    const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .slide-in-bottom');
+    const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .slide-in-bottom, .code-block');
     animatedElements.forEach(el => observer.observe(el));
 });
 
-// DevOps-themed typing animation (optional - can be enabled)
-// Uncomment below if you want typing effect
-/*
-const typingText = 'Lokesh Reddy K - DevOps Engineer';
-const typingElement = document.getElementById('typing-text');
-const cursor = document.querySelector('.cursor');
-let charIndex = 0;
-let isDeleting = false;
-let typingSpeed = 100;
+// Terminal Boot Animation
+const terminalOutput = document.getElementById('terminal-output');
 
-function type() {
-    if (isDeleting) {
-        typingElement.textContent = typingText.substring(0, charIndex - 1);
-        charIndex--;
-        typingSpeed = 50;
-    } else {
-        typingElement.textContent = typingText.substring(0, charIndex + 1);
-        charIndex++;
-        typingSpeed = 100;
-    }
+const bootSequence = [
+    { text: 'Initializing DevOps Portfolio...', type: 'info', delay: 200 },
+    { text: '[✓] Loading profile information...', type: 'success', delay: 500 },
+    { text: '[✓] Connecting to AWS Cloud...', type: 'success', delay: 800 },
+    { text: '[✓] Docker daemon started', type: 'success', delay: 1100 },
+    { text: '[✓] Kubernetes cluster connected', type: 'success', delay: 1400 },
+    { text: '[✓] CI/CD pipelines initialized', type: 'success', delay: 1700 },
+    { text: '[✓] Terraform state loaded', type: 'success', delay: 2000 },
+    { text: '[✓] Ansible playbook executed', type: 'success', delay: 2300 },
+    { text: '[✓] Prometheus metrics collected', type: 'success', delay: 2600 },
+    { text: '[✓] Grafana dashboards rendered', type: 'success', delay: 2900 },
+    { text: '', type: 'info', delay: 3200 },
+    { text: '┌─────────────────────────────────────────────┐', type: 'command', delay: 3500 },
+    { text: '│   Welcome to Lokesh Reddy\'s DevOps Space  │', type: 'command', delay: 3800 },
+    { text: '└─────────────────────────────────────────────┘', type: 'command', delay: 4100 },
+    { text: '', type: 'info', delay: 4400 },
+    { text: '🚀 Portfolio deployed successfully!', type: 'success', delay: 4700 },
+];
 
-    if (!isDeleting && charIndex === typingText.length) {
-        isDeleting = true;
-        typingSpeed = 2000; // Pause at end
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        typingSpeed = 500; // Pause before re-typing
-    }
-
-    setTimeout(type, typingSpeed);
+function playBootSequence() {
+    let accumulatedDelay = 0;
+    
+    bootSequence.forEach((line, index) => {
+        accumulatedDelay = line.delay;
+        setTimeout(() => {
+            const lineElement = document.createElement('div');
+            lineElement.className = `line ${line.type}`;
+            lineElement.textContent = line.text;
+            
+            if (terminalOutput) {
+                terminalOutput.appendChild(lineElement);
+                // Trigger reflow to restart animation
+                lineElement.offsetHeight;
+                lineElement.style.animation = 'none';
+                lineElement.offsetHeight;
+                lineElement.style.animation = null;
+                
+                // Scroll to bottom
+                const terminalBody = document.querySelector('.terminal-body');
+                if (terminalBody) {
+                    terminalBody.scrollTop = terminalBody.scrollHeight;
+                }
+            }
+            
+            // Hide overlay after sequence completes
+            if (index === bootSequence.length - 1) {
+                setTimeout(() => {
+                    const overlay = document.getElementById('landing-overlay');
+                    if (overlay) {
+                        overlay.style.display = 'none';
+                    }
+                }, 500);
+            }
+        }, line.delay);
+    });
 }
 
-// Start typing animation
-// document.addEventListener('DOMContentLoaded', type);
-*/
+// Start boot animation when DOM is ready
+document.addEventListener('DOMContentLoaded', playBootSequence);
 
 // Create floating particles
 function createParticles() {
@@ -102,3 +129,41 @@ console.log('%c🚀 Welcome to Lokesh Reddy\'s DevOps Portfolio!', 'color: #3fb9
 console.log('%c💼 DevOps Engineer | AWS | Docker | Kubernetes | CI/CD', 'color: #58a6ff; font-size: 14px;');
 console.log('%c📧 Contact: lokesh.reddy3010@gmail.com', 'color: #d29922; font-size: 14px;');
 console.log('%c🔧 Ready to automate and optimize your infrastructure!', 'color: #bc8cff; font-size: 14px;');
+
+// Add typing effect to skill cards on hover
+const skillItems = document.querySelectorAll('.skill-category li');
+skillItems.forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-5px) scale(1.05)';
+    });
+    item.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Add click handler to resume download button
+const resumeButton = document.querySelector('.download-button');
+if (resumeButton) {
+    resumeButton.addEventListener('click', function(e) {
+        console.log('%c📄 Resume download clicked!', 'color: #3fb950;');
+    });
+}
+
+// Add smooth reveal animation on scroll for all sections
+const sections = document.querySelectorAll('section');
+sections.forEach((section, index) => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(30px)';
+    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    observer.observe(section);
+});
