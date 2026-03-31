@@ -553,7 +553,6 @@ footer::before {
     display: inline-block;
     margin: 0 8px;
     position: relative;
-    animation: pulse 2s ease-in-out infinite;
 }
 
 .status-dot::before {
@@ -570,29 +569,124 @@ footer::before {
     text-overflow: ellipsis;
 }
 
-/* Individual colors for each skill */
-.status-dot:nth-child(1) { background: #3fb950; --pulse-color: #3fb950; }
-.status-dot:nth-child(2) { background: #d29922; --pulse-color: #d29922; }
-.status-dot:nth-child(3) { background: #f85149; --pulse-color: #f85149; }
-.status-dot:nth-child(4) { background: #58a6ff; --pulse-color: #58a6ff; }
-.status-dot:nth-child(5) { background: #bc8cff; --pulse-color: #bc8cff; }
-.status-dot:nth-child(6) { background: #39c5cf; --pulse-color: #39c5cf; }
-.status-dot:nth-child(7) { background: #e3b347; --pulse-color: #e3b347; }
-.status-dot:nth-child(8) { background: #ff922b; --pulse-color: #ff922b; }
-.status-dot:nth-child(9) { background: #0db7ed; --pulse-color: #0db7ed; }
-.status-dot:nth-child(10) { background: #326ce5; --pulse-color: #326ce5; }
-.status-dot:nth-child(11) { background: #e65245; --pulse-color: #e65245; }
-.status-dot:nth-child(12) { background: #f46800; --pulse-color: #f46800; }
+/* Linux - Green */
+.status-dot:nth-child(1) {
+    background: #3fb950;
+    animation: pulse1 2s ease-in-out infinite;
+}
+@keyframes pulse1 {
+    0%, 100% { box-shadow: 0 0 0 0 #3fb950; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(63, 185, 80, 0); opacity: 1; }
+}
 
-@keyframes pulse {
-    0%, 100% {
-        box-shadow: 0 0 0 0 var(--pulse-color, var(--accent-green));
-        opacity: 0.7;
-    }
-    50% {
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-        opacity: 1;
-    }
+/* Git - Yellow */
+.status-dot:nth-child(2) {
+    background: #d29922;
+    animation: pulse2 2s ease-in-out infinite;
+}
+@keyframes pulse2 {
+    0%, 100% { box-shadow: 0 0 0 0 #d29922; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(210, 153, 34, 0); opacity: 1; }
+}
+
+/* Maven - Red */
+.status-dot:nth-child(3) {
+    background: #f85149;
+    animation: pulse3 2s ease-in-out infinite;
+}
+@keyframes pulse3 {
+    0%, 100% { box-shadow: 0 0 0 0 #f85149; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(248, 81, 73, 0); opacity: 1; }
+}
+
+/* SonarQube - Blue */
+.status-dot:nth-child(4) {
+    background: #58a6ff;
+    animation: pulse4 2s ease-in-out infinite;
+}
+@keyframes pulse4 {
+    0%, 100% { box-shadow: 0 0 0 0 #58a6ff; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(88, 166, 255, 0); opacity: 1; }
+}
+
+/* Nexus - Purple */
+.status-dot:nth-child(5) {
+    background: #bc8cff;
+    animation: pulse5 2s ease-in-out infinite;
+}
+@keyframes pulse5 {
+    0%, 100% { box-shadow: 0 0 0 0 #bc8cff; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(188, 140, 255, 0); opacity: 1; }
+}
+
+/* Jenkins - Cyan */
+.status-dot:nth-child(6) {
+    background: #39c5cf;
+    animation: pulse6 2s ease-in-out infinite;
+}
+@keyframes pulse6 {
+    0%, 100% { box-shadow: 0 0 0 0 #39c5cf; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(57, 197, 207, 0); opacity: 1; }
+}
+
+/* Ansible - Gold */
+.status-dot:nth-child(7) {
+    background: #e3b347;
+    animation: pulse7 2s ease-in-out infinite;
+}
+@keyframes pulse7 {
+    0%, 100% { box-shadow: 0 0 0 0 #e3b347; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(227, 179, 71, 0); opacity: 1; }
+}
+
+/* AWS - Orange */
+.status-dot:nth-child(8) {
+    background: #ff922b;
+    animation: pulse8 2s ease-in-out infinite;
+}
+@keyframes pulse8 {
+    0%, 100% { box-shadow: 0 0 0 0 #ff922b; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(255, 146, 43, 0); opacity: 1; }
+}
+
+/* Docker - Light Blue */
+.status-dot:nth-child(9) {
+    background: #0db7ed;
+    animation: pulse9 2s ease-in-out infinite;
+}
+@keyframes pulse9 {
+    0%, 100% { box-shadow: 0 0 0 0 #0db7ed; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(13, 183, 237, 0); opacity: 1; }
+}
+
+/* Kubernetes - Blue */
+.status-dot:nth-child(10) {
+    background: #326ce5;
+    animation: pulse10 2s ease-in-out infinite;
+}
+@keyframes pulse10 {
+    0%, 100% { box-shadow: 0 0 0 0 #326ce5; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(50, 108, 229, 0); opacity: 1; }
+}
+
+/* Prometheus - Red */
+.status-dot:nth-child(11) {
+    background: #e65245;
+    animation: pulse11 2s ease-in-out infinite;
+}
+@keyframes pulse11 {
+    0%, 100% { box-shadow: 0 0 0 0 #e65245; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(230, 82, 69, 0); opacity: 1; }
+}
+
+/* Grafana - Orange */
+.status-dot:nth-child(12) {
+    background: #f46800;
+    animation: pulse12 2s ease-in-out infinite;
+}
+@keyframes pulse12 {
+    0%, 100% { box-shadow: 0 0 0 0 #f46800; opacity: 0.7; }
+    50% { box-shadow: 0 0 0 10px rgba(244, 104, 0, 0); opacity: 1; }
 }
 
 /* Code block decoration */
