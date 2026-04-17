@@ -1,5 +1,5 @@
-/* DevOps-Themed Portfolio Styles */
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Fira+Code:wght@400;500;600&family=Open+Sans&display=swap');
+/* Modern Portfolio Styles */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600&display=swap');
 
 * {
     margin: 0;
@@ -8,21 +8,25 @@
 }
 
 :root {
-    /* DevOps Terminal Color Palette */
-    --bg-primary: #0d1117;
-    --bg-secondary: #161b22;
-    --bg-tertiary: #21262d;
-    --border-color: #30363d;
-    --text-primary: #c9d1d9;
-    --text-secondary: #8b949e;
-    --accent-blue: #58a6ff;
-    --accent-green: #3fb950;
-    --accent-yellow: #d29922;
-    --accent-purple: #bc8cff;
-    --accent-red: #f85149;
-    --accent-cyan: #39c5cf;
-    --terminal-green: #2ea043;
-    --code-bg: #0d1117;
+    /* Modern Vibrant Color Palette */
+    --bg-primary: #0a0e27;
+    --bg-secondary: #1a1f3a;
+    --bg-tertiary: #252b4d;
+    --border-color: #3a426a;
+    --text-primary: #e8eaf6;
+    --text-secondary: #b0b8d1;
+    --accent-primary: #6366f1;
+    --accent-secondary: #8b5cf6;
+    --accent-success: #10b981;
+    --accent-warning: #f59e0b;
+    --accent-danger: #ef4444;
+    --accent-cyan: #06b6d4;
+    --accent-pink: #ec4899;
+    --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+    --gradient-2: linear-gradient(135deg, #06b6d4 0%, #6366f1 100%);
+    --gradient-3: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+    --card-shadow: 0 10px 40px rgba(99, 102, 241, 0.15);
+    --glow: 0 0 40px rgba(99, 102, 241, 0.3);
 }
 
 html {
@@ -30,9 +34,9 @@ html {
 }
 
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
@@ -59,16 +63,17 @@ body {
     100% { background-position: 0 0, 0 50px, 0 0; }
 }
 
-/* Terminal-style Header */
+/* Modern Header */
 header {
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    background: var(--bg-secondary);
     color: var(--text-primary);
-    padding: 3rem 1rem;
+    padding: 4rem 1rem;
     text-align: center;
-    border-bottom: 2px solid var(--accent-blue);
+    border-bottom: 2px solid var(--accent-primary);
     position: relative;
     z-index: 1;
-    box-shadow: 0 4px 30px rgba(88, 166, 255, 0.1);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
 }
 
 header::before {
@@ -77,8 +82,8 @@ header::before {
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-green), var(--accent-purple));
+    height: 4px;
+    background: var(--gradient-1);
     background-size: 200% 100%;
     animation: gradient-shift 3s ease infinite;
 }
@@ -92,8 +97,8 @@ header::before {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 3px solid var(--accent-blue);
-    box-shadow: 0 0 30px rgba(88, 166, 255, 0.3), inset 0 0 20px rgba(88, 166, 255, 0.1);
+    border: 4px solid var(--accent-primary);
+    box-shadow: var(--glow), inset 0 0 25px rgba(99, 102, 241, 0.3);
     object-fit: cover;
     margin-bottom: 1.5rem;
     animation: fadeIn 1s ease-in-out, profile-bounce 2s ease-in-out infinite;
@@ -105,17 +110,21 @@ header::before {
 }
 
 @keyframes profile-bounce {
-    0%, 100% { box-shadow: 0 0 30px rgba(88, 166, 255, 0.3); }
-    50% { box-shadow: 0 0 50px rgba(88, 166, 255, 0.5), 0 0 20px var(--accent-green); }
+    0%, 100% { box-shadow: var(--glow), inset 0 0 25px rgba(99, 102, 241, 0.3); }
+    50% { box-shadow: 0 0 50px rgba(139, 92, 246, 0.5), 0 0 30px rgba(236, 72, 153, 0.3); }
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
-    font-family: 'Fira Code', monospace;
-    color: var(--accent-blue);
-    text-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     letter-spacing: -1px;
+    text-shadow: none;
 }
 
 .header-content {
@@ -126,16 +135,20 @@ header h1 {
 }
 
 .devops-title {
-    font-size: 1.3rem;
-    color: var(--accent-green);
-    font-family: 'Fira Code', monospace;
-    font-weight: 500;
+    font-size: 1.4rem;
+    background: var(--gradient-2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     margin: 0;
+    letter-spacing: 0.5px;
 }
 
-/* Terminal-style Navigation */
+/* Modern Navigation */
 nav {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 nav ul {
@@ -144,7 +157,7 @@ nav ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 12px;
 }
 
 nav li {
@@ -154,30 +167,37 @@ nav li {
 nav a {
     color: var(--text-primary);
     text-decoration: none;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.95rem;
-    padding: 8px 20px;
+    font-weight: 500;
+    padding: 12px 24px;
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
-    border-radius: 6px;
+    border-radius: 10px;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
 nav a::before {
-    content: '> ';
-    color: var(--accent-green);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: var(--gradient-2);
     opacity: 0;
     transition: opacity 0.3s;
+    z-index: -1;
 }
 
 nav a:hover {
-    background: var(--accent-blue);
+    background: var(--accent-primary);
     color: var(--bg-primary);
-    border-color: var(--accent-blue);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(88, 166, 255, 0.3);
+    border-color: var(--accent-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
 }
 
 nav a:hover::before {
@@ -189,7 +209,7 @@ nav a:hover::before {
     display: flex;
     justify-content: center;
     gap: 20px;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .social-links a {
@@ -197,33 +217,33 @@ nav a:hover::before {
     font-size: 1.8rem;
     transition: all 0.3s ease;
     position: relative;
-    padding: 10px;
+    padding: 12px;
     border-radius: 50%;
     background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
 }
 
 .social-links a:hover {
-    color: var(--accent-blue);
-    transform: translateY(-5px) rotate(5deg);
+    color: var(--accent-primary);
+    transform: translateY(-5px) scale(1.1);
     background: var(--bg-secondary);
-    border-color: var(--accent-blue);
-    box-shadow: 0 5px 20px rgba(88, 166, 255, 0.3);
+    border-color: var(--accent-primary);
+    box-shadow: var(--glow);
 }
 
-.social-links a:nth-child(1):hover { color: var(--accent-blue); }
-.social-links a:nth-child(2):hover { color: var(--accent-purple); }
-.social-links a:nth-child(3):hover { color: var(--accent-green); }
+.social-links a:nth-child(1):hover { color: var(--accent-primary); box-shadow: 0 0 30px rgba(99, 102, 241, 0.5); }
+.social-links a:nth-child(2):hover { color: var(--accent-secondary); box-shadow: 0 0 30px rgba(139, 92, 246, 0.5); }
+.social-links a:nth-child(3):hover { color: var(--accent-success); box-shadow: 0 0 30px rgba(16, 185, 129, 0.5); }
 
 /* Section Styles */
 section {
     padding: 4rem 1.5rem;
     margin: 2rem auto;
     max-width: 1100px;
-    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+    background: var(--bg-secondary);
     backdrop-filter: blur(10px);
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
     border: 1px solid var(--border-color);
     position: relative;
     z-index: 1;
@@ -237,7 +257,7 @@ section::before {
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, var(--accent-blue), var(--accent-green));
+    background: var(--gradient-1);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -248,27 +268,42 @@ section:hover::before {
 
 h2 {
     text-align: center;
-    color: var(--accent-blue);
-    font-family: 'Fira Code', monospace;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     margin-bottom: 2.5rem;
     position: relative;
-    font-size: 2rem;
+    font-size: 2.2rem;
     letter-spacing: -0.5px;
+    background: var(--gradient-1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 h2::before {
-    content: '$ ';
-    color: var(--accent-green);
+    content: '🚀 ';
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+section:hover h2::before {
+    opacity: 1;
 }
 
 h2:after {
     content: '';
     display: block;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
-    margin: 15px auto 0;
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-1);
+    margin: 18px auto 0;
     border-radius: 2px;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
 }
 
 /* About Section */
@@ -281,13 +316,13 @@ h2:after {
     margin: 0 auto;
 }
 
-/* Skills Section - Terminal Style */
+/* Skills Section - Modern Style */
 .skills-box {
-    background: var(--code-bg);
+    background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 1.5rem;
-    font-family: 'Fira Code', monospace;
+    border-radius: 16px;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 .skill-category ul {
@@ -298,44 +333,31 @@ h2:after {
 }
 
 .skill-category li {
-    background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
-    color: var(--text-primary);
-    padding: 10px 18px;
-    border-radius: 6px;
+    background: var(--gradient-2);
+    color: var(--bg-primary);
+    padding: 12px 22px;
+    border-radius: 10px;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
-    border: 1px solid var(--border-color);
+    border: none;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-}
-
-.skill-category li::before {
-    content: '$ ';
-    color: var(--accent-green);
-    position: absolute;
-    left: 8px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
 }
 
 .skill-category li:hover {
-    transform: translateY(-3px);
-    border-color: var(--accent-blue);
-    box-shadow: 0 5px 20px rgba(88, 166, 255, 0.2);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.5);
 }
 
-.skill-category li:hover::before {
-    opacity: 1;
-}
-
-.skill-category li:nth-child(1) { color: var(--accent-green); }
-.skill-category li:nth-child(2) { color: var(--accent-blue); }
-.skill-category li:nth-child(3) { color: var(--accent-yellow); }
-.skill-category li:nth-child(4) { color: var(--accent-purple); }
-.skill-category li:nth-child(5) { color: var(--accent-cyan); }
-.skill-category li:nth-child(6) { color: var(--accent-red); }
+.skill-category li:nth-child(1) { background: var(--gradient-3); }
+.skill-category li:nth-child(2) { background: var(--gradient-2); }
+.skill-category li:nth-child(3) { background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%); }
+.skill-category li:nth-child(4) { background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%); }
+.skill-category li:nth-child(5) { background: linear-gradient(135deg, #06b6d4 0%, #22d3ee 100%); }
+.skill-category li:nth-child(6) { background: linear-gradient(135deg, #ef4444 0%, #f87171 100%); }
 
 /* Contact Section */
 #contact p {
@@ -347,32 +369,34 @@ h2:after {
 }
 
 #contact a {
-    color: var(--accent-blue);
+    color: var(--accent-primary);
     text-decoration: none;
-    transition: color 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
 }
 
 #contact a:hover {
-    color: var(--accent-green);
-    text-decoration: underline;
+    color: var(--accent-secondary);
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
 }
 
 .download-button {
     display: inline-block;
     margin: 30px auto 0;
-    padding: 15px 35px;
+    padding: 16px 40px;
     text-align: center;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-green));
+    background: var(--gradient-1);
     color: var(--bg-primary);
     text-decoration: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-weight: 600;
-    font-family: 'Fira Code', monospace;
-    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.05rem;
     transition: all 0.3s ease;
     border: none;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 8px 30px rgba(99, 102, 241, 0.4);
 }
 
 .download-button::before {
@@ -382,13 +406,13 @@ h2:after {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
     transition: left 0.5s;
 }
 
 .download-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(63, 185, 80, 0.3);
+    box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
 }
 
 .download-button:hover::before {
@@ -398,21 +422,22 @@ h2:after {
 /* Footer */
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 2.5rem;
     background: var(--bg-secondary);
     color: var(--text-secondary);
     margin-top: 2rem;
     border-top: 1px solid var(--border-color);
     position: relative;
     z-index: 1;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
 }
 
 footer::before {
-    content: '// © 2025 Lokesh Reddy Kotameeda - Deployed with ❤️';
+    content: '© 2025 Lokesh Reddy Kotameeda - Built with ❤️';
     display: block;
-    color: var(--accent-green);
+    color: var(--accent-secondary);
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
@@ -461,21 +486,22 @@ footer::before {
     transform: translateY(0);
 }
 
-/* DevOps-themed decorative elements */
+/* Modern decorative elements */
 .code-snippet {
-    background: var(--code-bg);
+    background: var(--bg-tertiary);
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 1rem;
-    font-family: 'Fira Code', monospace;
+    border-radius: 12px;
+    padding: 1.25rem;
+    font-family: 'Poppins', sans-serif;
     font-size: 0.85rem;
     color: var(--text-secondary);
     margin: 1rem 0;
     position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .code-snippet::before {
-    content: '📄';
+    content: '💻';
     position: absolute;
     top: 10px;
     right: 15px;
@@ -484,19 +510,24 @@ footer::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header h1 { font-size: 2rem; }
+    header h1 { font-size: 2.2rem; }
     header p { font-size: 1rem; }
-    nav a { font-size: 0.85rem; padding: 6px 15px; }
+    nav a { font-size: 0.85rem; padding: 10px 18px; }
     .social-links a { font-size: 1.5rem; }
-    h2 { font-size: 1.5rem; }
-    .skill-category li { font-size: 0.8rem; padding: 8px 14px; }
+    h2 { font-size: 1.75rem; }
+    .skill-category li { font-size: 0.8rem; padding: 10px 16px; }
     .profile-photo { width: 140px; height: 140px; }
 }
 
-/* Blinking cursor animation for DevOps feel */
-@keyframes cursor-blink {
-    0%, 50% { border-color: transparent; }
-    51%, 100% { border-color: var(--accent-green); }
+/* Enhanced glow animations */
+@keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.5); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
 }
 
 /* Floating particles animation */
