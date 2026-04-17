@@ -1,5 +1,5 @@
 /* Premium Modern Portfolio Styles */
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Montserrat:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cabin+Sketch:wght@400;500;600;700&family=Playfair+Display:wght@700;800;900&display=swap');
 
 * {
     margin: 0;
@@ -8,7 +8,7 @@
 }
 
 :root {
-    /* Premium Rich Color Palette */
+    /* Premium Rich Color Palette - Red Theme */
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
     --bg-tertiary: #334155;
@@ -17,21 +17,21 @@
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
-    --accent-primary: #6366f1;
-    --accent-secondary: #8b5cf6;
+    --accent-primary: #ef4444;
+    --accent-secondary: #dc2626;
     --accent-success: #10b981;
     --accent-warning: #f59e0b;
     --accent-danger: #ef4444;
     --accent-cyan: #06b6d4;
     --accent-pink: #ec4899;
     --accent-gold: #fbbf24;
-    --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 25%, #ec4899 50%, #f59e0b 75%, #10b981 100%);
-    --gradient-2: linear-gradient(135deg, #06b6d4 0%, #6366f1 50%, #8b5cf6 100%);
+    --gradient-1: linear-gradient(135deg, #ef4444 0%, #dc2626 25%, #b91c1c 50%, #991b1b 75%, #7f1d1d 100%);
+    --gradient-2: linear-gradient(135deg, #ef4444 0%, #dc2626 50%, #b91c1c 100%);
     --gradient-3: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
     --gradient-card: linear-gradient(145deg, rgba(30, 41, 59, 0.95) 0%, rgba(51, 65, 85, 0.9) 100%);
-    --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(99, 102, 241, 0.1);
-    --card-shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(99, 102, 241, 0.2);
-    --glow: 0 0 40px rgba(99, 102, 241, 0.3), 0 0 80px rgba(139, 92, 246, 0.2);
+    --card-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(239, 68, 68, 0.1);
+    --card-shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(239, 68, 68, 0.2);
+    --glow: 0 0 40px rgba(239, 68, 68, 0.3), 0 0 80px rgba(220, 38, 38, 0.2);
     --glass: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
 }
@@ -41,7 +41,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', Arial, sans-serif;
+    font-family: 'Cabin Sketch', Arial, sans-serif;
     margin: 0;
     line-height: 1.7;
     color: var(--text-primary);
@@ -58,8 +58,8 @@ body::before {
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(circle at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 10%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 20% 30%, rgba(239, 68, 68, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 10%, rgba(220, 38, 38, 0.2) 0%, transparent 50%),
         radial-gradient(circle at 60% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 10% 70%, rgba(6, 182, 212, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.08) 0%, transparent 70%);
@@ -80,8 +80,8 @@ body::before {
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 100% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 100% 50%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 50% 100%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 0% 50%, rgba(6, 182, 212, 0.1) 0%, transparent 50%);
     z-index: -3;
@@ -195,18 +195,18 @@ header::after {
     height: 2px;
     background: var(--gradient-1);
     border-radius: 2px;
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
 }
 
 .profile-photo {
     width: 180px;
     height: 180px;
     border-radius: 50%;
-    border: 3px solid rgba(99, 102, 241, 0.6);
+    border: 3px solid rgba(239, 68, 68, 0.6);
     box-shadow:
         var(--glow),
-        0 0 60px rgba(99, 102, 241, 0.4),
-        0 0 120px rgba(139, 92, 246, 0.3);
+        0 0 60px rgba(239, 68, 68, 0.4),
+        0 0 120px rgba(220, 38, 38, 0.3);
     object-fit: cover;
     margin-bottom: 2rem;
     animation: fadeIn 1s ease-in-out, profile-glow 3s ease-in-out infinite;
@@ -215,31 +215,31 @@ header::after {
 
 @keyframes profile-glow {
     0%, 100% {
-        box-shadow: var(--glow), 0 0 60px rgba(99, 102, 241, 0.4), 0 0 120px rgba(139, 92, 246, 0.3);
+        box-shadow: var(--glow), 0 0 60px rgba(239, 68, 68, 0.4), 0 0 120px rgba(220, 38, 38, 0.3);
     }
     50% {
-        box-shadow: 0 0 80px rgba(99, 102, 241, 0.6), 0 0 150px rgba(139, 92, 246, 0.5), 0 0 200px rgba(236, 72, 153, 0.4);
+        box-shadow: 0 0 80px rgba(239, 68, 68, 0.6), 0 0 150px rgba(220, 38, 38, 0.5), 0 0 200px rgba(236, 72, 153, 0.4);
     }
 }
 
 header h1 {
     margin: 0;
     font-size: 3.8rem;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
     background: var(--gradient-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     letter-spacing: -1.5px;
-    text-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+    text-shadow: 0 0 40px rgba(239, 68, 68, 0.3);
     animation: text-glow 4s ease-in-out infinite;
     position: relative;
 }
 
 @keyframes text-glow {
-    0%, 100% { filter: drop-shadow(0 0 10px rgba(99, 102, 241, 0.3)); }
-    50% { filter: drop-shadow(0 0 25px rgba(139, 92, 246, 0.5)); }
+    0%, 100% { filter: drop-shadow(0 0 10px rgba(239, 68, 68, 0.3)); }
+    50% { filter: drop-shadow(0 0 25px rgba(220, 38, 38, 0.5)); }
 }
 
 .header-content {
@@ -255,11 +255,11 @@ header h1 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Caveat', cursive;
     font-weight: 700;
     margin: 0;
     letter-spacing: 1px;
-    text-transform: uppercase;
+    text-transform: none;
     position: relative;
     padding-left: 1.5rem;
 }
@@ -298,7 +298,7 @@ nav li {
 nav a {
     color: var(--text-primary);
     text-decoration: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cabin Sketch', cursive;
     font-size: 0.95rem;
     font-weight: 600;
     padding: 14px 28px;
@@ -338,7 +338,7 @@ nav a::after {
 
 nav a:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.4), 0 0 0 1px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 15px 40px rgba(239, 68, 68, 0.4), 0 0 0 1px rgba(239, 68, 68, 0.3);
 }
 
 nav a:hover::before {
@@ -391,8 +391,8 @@ nav a:hover::after {
     opacity: 1;
 }
 
-.social-links a:nth-child(1):hover { box-shadow: 0 10px 40px rgba(99, 102, 241, 0.5); }
-.social-links a:nth-child(2):hover { box-shadow: 0 10px 40px rgba(139, 92, 246, 0.5); }
+.social-links a:nth-child(1):hover { box-shadow: 0 10px 40px rgba(239, 68, 68, 0.5); }
+.social-links a:nth-child(2):hover { box-shadow: 0 10px 40px rgba(220, 38, 38, 0.5); }
 .social-links a:nth-child(3):hover { box-shadow: 0 10px 40px rgba(236, 72, 153, 0.5); }
 
 /* Premium Section Styles */
@@ -420,7 +420,7 @@ section::before {
     height: 100%;
     background: var(--gradient-1);
     border-radius: 0 6px 6px 0;
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
 }
 
 section::after {
@@ -430,14 +430,14 @@ section::after {
     right: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(239, 68, 68, 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
 h2 {
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
     margin-bottom: 2.5rem;
     font-size: 2.5rem;
     letter-spacing: -0.8px;
@@ -458,7 +458,7 @@ h2:after {
     background: var(--gradient-1);
     margin: 20px auto 0;
     border-radius: 3px;
-    box-shadow: 0 0 15px rgba(99, 102, 241, 0.6), 0 0 30px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.6), 0 0 30px rgba(220, 38, 38, 0.4);
 }
 
 /* About Section */
@@ -537,14 +537,14 @@ h2:after {
 }
 
 .skill-category h3 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 800;
     font-size: 1.25rem;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
     padding-left: 1rem;
     border-left: 5px solid var(--accent-primary);
-    background: linear-gradient(90deg, rgba(99, 102, 241, 0.15) 0%, transparent 100%);
+    background: linear-gradient(90deg, rgba(239, 68, 68, 0.15) 0%, transparent 100%);
     letter-spacing: 0.3px;
 }
 
@@ -587,7 +587,7 @@ h2:after {
 .skill-category li:hover {
     transform: translateY(-5px) scale(1.05);
     border-color: transparent;
-    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 15px 40px rgba(239, 68, 68, 0.3);
 }
 
 .skill-category li:hover::before {
@@ -597,7 +597,7 @@ h2:after {
 .skill-category li:nth-child(1):hover { box-shadow: 0 15px 40px rgba(16, 185, 129, 0.35); }
 .skill-category li:nth-child(2):hover { box-shadow: 0 15px 40px rgba(6, 182, 212, 0.35); }
 .skill-category li:nth-child(3):hover { box-shadow: 0 15px 40px rgba(245, 158, 11, 0.35); }
-.skill-category li:nth-child(4):hover { box-shadow: 0 15px 40px rgba(139, 92, 246, 0.35); }
+.skill-category li:nth-child(4):hover { box-shadow: 0 15px 40px rgba(239, 68, 68, 0.35); }
 .skill-category li:nth-child(5):hover { box-shadow: 0 15px 40px rgba(6, 182, 212, 0.35); }
 .skill-category li:nth-child(6):hover { box-shadow: 0 15px 40px rgba(239, 68, 68, 0.35); }
 
@@ -662,7 +662,7 @@ h2:after {
     border: none;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 10px 40px rgba(239, 68, 68, 0.4);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -689,7 +689,7 @@ h2:after {
 
 .download-button:hover {
     transform: translateY(-6px) scale(1.02);
-    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.5), 0 0 0 4px rgba(99, 102, 241, 0.1);
+    box-shadow: 0 20px 60px rgba(239, 68, 68, 0.5), 0 0 0 4px rgba(239, 68, 68, 0.1);
 }
 
 .download-button:hover::before {
@@ -753,14 +753,14 @@ footer p {
 
 .status-dot:nth-child(1) { background: var(--accent-success); box-shadow: 0 0 20px rgba(16, 185, 129, 0.8); }
 .status-dot:nth-child(2) { background: var(--accent-cyan); box-shadow: 0 0 20px rgba(6, 182, 212, 0.8); }
-.status-dot:nth-child(3) { background: var(--accent-primary); box-shadow: 0 0 20px rgba(99, 102, 241, 0.8); }
-.status-dot:nth-child(4) { background: var(--accent-secondary); box-shadow: 0 0 20px rgba(139, 92, 246, 0.8); }
+.status-dot:nth-child(3) { background: var(--accent-primary); box-shadow: 0 0 20px rgba(239, 68, 68, 0.8); }
+.status-dot:nth-child(4) { background: var(--accent-secondary); box-shadow: 0 0 20px rgba(220, 38, 38, 0.8); }
 .status-dot:nth-child(5) { background: var(--accent-warning); box-shadow: 0 0 20px rgba(245, 158, 11, 0.8); }
 .status-dot:nth-child(6) { background: var(--accent-pink); box-shadow: 0 0 20px rgba(236, 72, 153, 0.8); }
 .status-dot:nth-child(7) { background: var(--accent-success); box-shadow: 0 0 20px rgba(16, 185, 129, 0.8); }
 .status-dot:nth-child(8) { background: var(--accent-cyan); box-shadow: 0 0 20px rgba(6, 182, 212, 0.8); }
-.status-dot:nth-child(9) { background: var(--accent-primary); box-shadow: 0 0 20px rgba(99, 102, 241, 0.8); }
-.status-dot:nth-child(10) { background: var(--accent-secondary); box-shadow: 0 0 20px rgba(139, 92, 246, 0.8); }
+.status-dot:nth-child(9) { background: var(--accent-primary); box-shadow: 0 0 20px rgba(239, 68, 68, 0.8); }
+.status-dot:nth-child(10) { background: var(--accent-secondary); box-shadow: 0 0 20px rgba(220, 38, 38, 0.8); }
 
 @keyframes pulse1 {
     0%, 100% { box-shadow: 0 0 0 0 var(--accent-success); opacity: 0.7; }
@@ -978,8 +978,8 @@ footer p {
 
 /* Enhanced glow animations */
 @keyframes glow-pulse {
-    0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.5); }
+    0%, 100% { box-shadow: 0 0 20px rgba(239, 68, 68, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(220, 38, 38, 0.5); }
 }
 
 @keyframes shimmer {
