@@ -465,6 +465,22 @@ h2::after {
     box-shadow: 0 4px 20px rgba(139, 92, 246, 0.2);
 }
 
+/* Skill Highlight in About Section */
+.skill-highlight {
+    color: var(--accent-cyan);
+    font-weight: 500;
+    cursor: pointer;
+    border-bottom: 1px dashed var(--accent-cyan);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.skill-highlight:hover {
+    color: var(--accent-purple);
+    border-bottom-color: var(--accent-purple);
+    text-shadow: 0 0 20px var(--glow-purple);
+}
+
 #contact {
     text-align: center;
 }

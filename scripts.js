@@ -18,11 +18,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Skill tooltip functionality
-    const skillItems = document.querySelectorAll('.skill-category li');
+    // Skill tooltip functionality for both About and Skills sections
     const tooltip = document.getElementById('skill-tooltip');
     
-    skillItems.forEach(item => {
+    // Handle Skills section hover
+    document.querySelectorAll('.skill-category li').forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const desc = this.getAttribute('data-desc');
+            if (desc && tooltip) {
+                tooltip.textContent = desc;
+                tooltip.classList.add('visible');
+            }
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            if (tooltip) {
+                tooltip.classList.remove('visible');
+            }
+        });
+    });
+
+    // Handle About section hover
+    document.querySelectorAll('.skill-highlight').forEach(item => {
         item.addEventListener('mouseenter', function() {
             const desc = this.getAttribute('data-desc');
             if (desc && tooltip) {
