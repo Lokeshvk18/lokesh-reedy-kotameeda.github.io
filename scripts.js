@@ -18,6 +18,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Skill tooltip functionality
+    const skillItems = document.querySelectorAll('.skill-category li');
+    const tooltip = document.getElementById('skill-tooltip');
+    
+    skillItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const desc = this.getAttribute('data-desc');
+            if (desc && tooltip) {
+                tooltip.textContent = desc;
+                tooltip.classList.add('visible');
+            }
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            if (tooltip) {
+                tooltip.classList.remove('visible');
+            }
+        });
+    });
+
     // Intersection Observer for section animations
     const observerOptions = {
         root: null,

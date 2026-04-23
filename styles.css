@@ -135,15 +135,17 @@ header {
 }
 
 header h1 {
-    font-family: 'Syne', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 0.5rem;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 4rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
     background: var(--accent-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    position: relative;
 }
 
 .devops-title {
@@ -309,6 +311,48 @@ section::before {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* Skill Tooltip Styles */
+.skill-tooltip {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1rem 1.5rem;
+    max-width: 350px;
+    width: 90%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.skill-tooltip.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.skill-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: var(--bg-card);
+    border-right: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
 }
 
 h2 {
@@ -537,7 +581,7 @@ particles {
 
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
     }
     
     .devops-title {

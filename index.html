@@ -6,7 +6,7 @@
     <title>Lokesh Reddy K - DevOps Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -87,57 +87,59 @@
 <section id="skills">
     <h2>Technical Skills</h2>
     <div class="skills-box">
+        <!-- Tooltip for skill descriptions -->
+        <div class="skill-tooltip" id="skill-tooltip"></div>
         <div class="skill-category">
             <h3>Operating Systems & Cloud</h3>
             <ul>
-                <li>Linux (Ubuntu)</li>
-                <li>AWS Cloud</li>
-                <li>GCP</li>
+                <li data-desc="Linux system administration, server management, shell scripting, and automated deployments">Linux (Ubuntu)</li>
+                <li data-desc="AWS EC2, S3, VPC, IAM, Lambda, Load Balancers, Auto Scaling, CloudWatch">AWS Cloud</li>
+                <li data-desc="Google Cloud Compute Engine, Cloud Storage, IAM, Deployment Manager">GCP</li>
             </ul>
         </div>
         <div class="skill-category">
             <h3>CI/CD & Automation</h3>
             <ul>
-                <li>Jenkins</li>
-                <li>CircleCI</li>
-                <li>Maven</li>
-                <li>Ansible</li>
+                <li data-desc="Pipeline configuration, automated builds, deployment scripts, plugin management">Jenkins</li>
+                <li data-desc="Orbs, pipelines, Docker executors, context variables">CircleCI</li>
+                <li data-desc="Build lifecycle, dependency management, project templates">Maven</li>
+                <li data-desc="Playbooks, ad-hoc commands, automation scripts, configuration management">Ansible</li>
             </ul>
         </div>
         <div class="skill-category">
             <h3>Source Control & Code Quality</h3>
             <ul>
-                <li>Git & GitHub</li>
-                <li>GitLab</li>
-                <li>Bitbucket</li>
-                <li>SonarQube</li>
-                <li>Nexus Repository</li>
+                <li data-desc="Repositories, pull requests, GitHub Actions, branch management">Git & GitHub</li>
+                <li data-desc="CI/CD integration, issue tracking, container registry">GitLab</li>
+                <li data-desc="Bitbucket pipelines, code review, branch permissions">Bitbucket</li>
+                <li data-desc="Static code analysis, code smells, technical debt tracking">SonarQube</li>
+                <li data-desc="Maven/NPM repositories, artifact storage, proxy management">Nexus Repository</li>
             </ul>
         </div>
         <div class="skill-category">
             <h3>Containers & Orchestration</h3>
             <ul>
-                <li>Docker</li>
-                <li>Docker Compose</li>
-                <li>Kubernetes</li>
-                <li>Helm</li>
+                <li data-desc="Dockerfiles, multi-stage builds, image optimization, networking">Docker</li>
+                <li data-desc="Multi-service orchestration, networking, volume management">Docker Compose</li>
+                <li data-desc="Deployments, StatefulSets, Services, ConfigMaps, Secrets, RBAC">Kubernetes</li>
+                <li data-desc="Helm charts, package management, release automation">Helm</li>
             </ul>
         </div>
         <div class="skill-category">
             <h3>Infrastructure as Code</h3>
             <ul>
-                <li>Terraform</li>
-                <li>Vault</li>
+                <li data-desc="AWS resource provisioning, modules, state management">Terraform</li>
+                <li data-desc="Secrets encryption, dynamic secrets, access management">Vault</li>
             </ul>
         </div>
         <div class="skill-category">
             <h3>Monitoring & Observability</h3>
             <ul>
-                <li>Prometheus</li>
-                <li>Grafana</li>
-                <li>Loki</li>
-                <li>Promtail</li>
-                <li>ELK Stack</li>
+                <li data-desc="Metrics collection, PromQL, alert rules, target scrapping">Prometheus</li>
+                <li data-desc="Dashboards, data visualization, alerting integrations">Grafana</li>
+                <li data-desc="Log aggregation, log queries, label matching">Loki</li>
+                <li data-desc="Log shipping, file tailing, pipeline configuration">Promtail</li>
+                <li data-desc="Elasticsearch, Logstash, Kibana for centralized logging">ELK Stack</li>
             </ul>
         </div>
     </div>
